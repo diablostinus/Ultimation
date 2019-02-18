@@ -1,0 +1,103 @@
+{
+  "itemName" : "ultracannon",
+  "price" : 1080,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "A weapon of true destruction. . .",
+  "shortdescription" : "Ultra Cannon",
+  // "tooltipKind" : "gun",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun"],
+  "level" : 8,
+
+  "inventoryIcon" : [
+    { "image" : "ultracannon.png" }
+  ],
+
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "ultracannon.png",
+    "barrel" : "",
+    "muzzleFlash" : "ultramuzzleflash.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : ["/sfx/gun/sniper4.ogg"]
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "color" : [150, 0, 0]
+      }
+    }
+  },
+
+  "baseOffset" : [0.125, 0.625],
+  "muzzleOffset" : [1.75, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "fire",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.2,
+    "baseDps" : 15.5,
+    "energyUsage" : 20,
+    "projectileCount" : 3,
+
+
+
+    "inaccuracy" : 0.05
+
+,
+
+    "fireType" : "auto",
+
+    "projectileType" : "gatlingbolt",
+    "projectileParameters" : {
+      "knockback" : 10    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {
+      "fire" : { "projectileType" : "sawchakram_l6" }
+    },
+    "energyUsage" : 205.5
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

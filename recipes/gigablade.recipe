@@ -1,0 +1,8 @@
+{
+  "input" : [
+    { "item" : "gigabladeshard", "count" : 100 },
+    { "item" : "soulpowder", "count" : 250 }
+  ],
+  "output" : { "item" : "gigablade", "count" : 1 },
+  "groups" : [ "craftinganvil", "weapons", "all" ]
+}

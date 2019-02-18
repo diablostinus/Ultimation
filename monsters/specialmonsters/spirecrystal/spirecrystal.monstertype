@@ -1,0 +1,195 @@
+{
+  "type" : "spirecrystal",
+  "shortdescription" : "Spire Crystal",
+  "description" : "A crystal that seems to fire spire beam's.",
+
+  "categories" : [ "spirecrystal" ],
+  "parts" : [ "body", "bodylit" ],
+
+  "animation" : "spirecrystal.animation",
+
+  "dropPools" : [ "kluexsentryTreasure" ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetQueryRange" : 40,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 100,
+      "targetOutOfSightTime" : 10.0,
+
+      "hostileActions" : [
+        {
+          "name" : "action-fire",
+          "cooldown" : 2.0,
+          "parameters" : {
+            "onGround" : false,
+            "requireLineOfSight" : true,
+            "maximumRange" : 100,
+            "minimumRange" : 2,
+            "windupState" : "fire",
+            "windupTime" : 0.6,
+            "windupStopForce" : 200,
+
+            "projectileType" : "spiretorpedo",
+            "fireOffset" : [0, -2.0],
+            "fireSound" : "fire",
+            "fireState" : "",
+
+            "winddownState" : "",
+            "winddownTime" : 0.1
+          }
+        }
+      ],
+
+      "approachActions" : [
+        {
+          "name" : "wander-fly",
+          "parameters" : {
+            "wanderTime" : 30,
+            "groundDistance" : 15,
+            "ceilingDistance" : 4,
+            "xVelocity" : 8,
+            "yVelocity" : 12
+          }
+        }
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-fly"
+        }
+      ],
+
+      "wanderActions" : [
+        {
+          "name" : "wander-fly",
+          "parameters" : {
+            "wanderTime" : 5,
+            "groundDistance" : 0.5,
+            "ceilingDistance" : 0.5,
+            "xVelocity" : 2,
+            "yVelocity" : 2
+          }
+        }
+      ],
+
+      "concurrentActions" : [ ],
+
+      "concurrentHostileActions" : [{"name":"action-spawncompanions", "parameters":{"spawnCooldown":1, "monsterType":"spireeye", "maxCount":10}}] 
+    },
+
+
+    "touchDamage" : {
+      "poly" : [ [0.875, 2.625], [1.625, 1.875], [1.625, -1.875], [0.875, -2.625], [-0.875, -2.625], [-1.625, -1.875], [-1.625, 1.875], [-0.875, 2.625] ],
+      "damage" : 20,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "ice",
+      "knockback" : 50,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [0.875, 2.625], [1.625, 1.875], [1.0, -1.875], [0.375, -2.625], [-0.375, -2.625], [-1.0, -1.875], [-1.625, 1.875], [-0.875, 2.625] ],
+
+      "mass" : 0.5,
+      "walkSpeed" : 4,
+      "runSpeed" : 12,
+      "gravityEnabled" : false,
+
+      "airFriction" : 2,
+      "airForce" : 20,
+      "flySpeed" : 25
+    },
+
+    "bodyMaterialKind" : "stone",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "stone"
+      },
+
+      "appliesEnvironmentStatusEffects" : true,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 95000        },
+        "maxHealth" : {
+          "baseValue" : 700
+        },
+        "protection" : {
+          "baseValue" : 6.85
+        },
+        "healthRegen" : {
+          "baseValue" : 0.3
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 55.5        },
+        "iceStatusImmunity" : {
+          "baseValue" : 55.5
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 55.5
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 55.5
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 150
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : true,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [0, 0, 255]
+  }
+}

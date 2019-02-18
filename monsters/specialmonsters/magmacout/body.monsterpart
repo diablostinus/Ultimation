@@ -1,0 +1,9 @@
+{
+	"name" : "magmacout",
+	"category" : "magmacout",
+	"type" : "body",
+
+	"frames" : {
+		"body" : "magmacout.png"
+	}
+}

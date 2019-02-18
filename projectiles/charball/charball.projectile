@@ -1,0 +1,22 @@
+{
+  "projectileName" : "charball",
+  "physics" : "grenade",
+  "bounces" : 4,
+  "image" : "charball.png",
+  "animationCycle" : 0.5,
+  "frameNumber" : 4,
+  "emitters" : [ "tarball" ],
+  "power" : 6.5,
+  "speed" : 32,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/tarexplosion/tarexplosion.config"
+    }
+  ],
+  "damageKind" : "tarball",
+  "damageKindImage" : "/interface/statuses/tar.png",
+  "statusEffects" : [
+    "burning"
+  ]
+}

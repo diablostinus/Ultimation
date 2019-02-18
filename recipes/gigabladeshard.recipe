@@ -1,0 +1,8 @@
+{
+  "input" : [
+    { "item" : "soulpowder", "count" : 5 },
+    { "item" : "volatilepowder", "count" : 15 }
+  ],
+  "output" : { "item" : "gigabladeshard", "count" : 1 },
+  "groups" : [ "craftingfurnace", "bars", "all" ]
+}

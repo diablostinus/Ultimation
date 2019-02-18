@@ -1,0 +1,94 @@
+{
+  "itemName" : "diggerspear",
+  "price" : 1080,
+  "level" : 125,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "This is what happens when you combine a Drill Spear and a Erchius Eye, a DIGGER!",
+  "shortdescription" : "Erchius Digger",
+  "tooltipKind" : "base",
+  "category" : "spear",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","melee","spear"],
+
+  "inventoryIcon" : [
+    {"image" : "diggerspear.png:1"},
+    {"image" : "diggerspear_fullbright.png:1"}
+  ],
+
+  "animation" : "diggerspear.animation",
+  "animationParts" : {},
+  "animationCustom" : {},
+
+  "scripts" : ["/items/active/weapons/melee/meleeweapon.lua"],
+
+  "elementalType" : "physical",
+
+  "aimOffset" : -1.0,
+
+  "primaryAbilityType" : "spearstab",
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/other/drillspear/drillspearstab.lua"],
+    "class" : "DrillSpearStab",
+
+    "fireTime" : 0.1,
+    "baseDps" : 55.5
+  },
+
+  "altAbility" : {
+    "scripts" : ["/items/active/weapons/other/drillspear/drillcharge.lua"],
+    "class" : "DrillCharge",
+
+    "energyUsage" : 5,
+
+    "boostSpeed" : 75,
+    "boostForce" : 75,
+
+    "damageTimeout" : 0,
+    "damageConfig" : {
+      "damageSourceKind" : "spear",
+      "statusEffects" : [ ],
+      "knockbackMode" : "aim",
+      "knockback" : 5,
+      "baseDamage" : 0.5
+    },
+
+    "tileDamage" : 185.5,
+    "tileDamageRate" : 0.1,
+    "damageTileDepth" : 15,
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.1,
+        "armRotation" : -100,
+        "weaponRotation" : 10,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 0.5],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "armRotation" : -15,
+        "weaponRotation" : -75,
+        "twoHanded" : true,
+        "weaponOffset" : [0.0, 0.75],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "winddown" : {
+        "duration" : 0.5,
+        "armRotation" : -85,
+        "weaponRotation" : -5,
+        "twoHanded" : true,
+        "weaponOffset" : [0, 0.5],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      }
+    }
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

@@ -1,0 +1,11 @@
+{
+  "input" : [
+   { "item" : "copperbar", "count" : 10 },    { "item" : "coalore", "count" : 5 }
+  ],
+  "output" : {
+    "item" : "soulbar",
+    "count" : 2
+  },
+  "duration" : 0.45,
+  "groups" : [ "craftingfurnace", "bars", "all" ]
+}

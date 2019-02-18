@@ -1,0 +1,13 @@
+{
+  "itemName" : "gigabladeshard",
+  "price" : 250,
+  "rarity" : "legendary",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "gigabladeshard.png",
+  "description" : "It's a Shard of a Gigablade, perhaps you can make use of this piece?",
+  "shortdescription" : "Gigablade Shard",
+  "itemTags" : [ "reagent" ],
+  "learnBlueprintsOnPickup" : [
+    "gigablade"
+  ]
+}

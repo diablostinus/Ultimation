@@ -1,0 +1,11 @@
+{
+  "input" : [
+   { "item" : "soulbar", "count" : 1 },    { "item" : "corefragmentore", "count" : 20 }
+  ],
+  "output" : {
+    "item" : "soulpowder",
+    "count" : 10
+  },
+  "duration" : 1.05,
+  "groups" : [ "craftingfurnace", "bars", "all" ]
+}

@@ -1,0 +1,15 @@
+{
+  "projectileName" : "crystalshard",
+  "physics" : "grenade",
+  "bounces" : 10,
+  "timeToLive" : 1.8,
+  "damageKindImage" : "crystalshardicon.png",
+  "image" : "crystalshard.png",
+  "animationLoops" : false,
+  "animationCycle" : 0.6,
+  "frameNumber" : 5,
+  "emitters" : [ "iceplasmarocket" ],
+  "speed" : 30,
+  "power" : 0.1,
+  "damageKind" : "ice"
+}

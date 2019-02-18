@@ -1,0 +1,9 @@
+{
+  "name" : "bopper",
+  "category" : "bopper",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "bopper.png"
+  }
+}

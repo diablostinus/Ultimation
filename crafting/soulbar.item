@@ -1,0 +1,13 @@
+{
+  "itemName" : "soulbar",
+  "price" : 140,
+  "rarity" : "legendary",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "soulbar.png",
+  "description" : "These are rare to find, you are lucky to find one.",
+  "shortdescription" : "Soul Bar",
+  "itemTags" : [ "reagent" ],
+  "learnBlueprintsOnPickup" : [
+    "soulpowder"
+  ]
+}
