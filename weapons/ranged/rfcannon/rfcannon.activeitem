@@ -53,8 +53,7 @@
           "centered" : true,
           "offset" : [1.5, 0],
           "zLevel" : 0,
-          "transformationGroups" : ["weapon"],
-          "fullbright" : true
+          "transformationGroups" : ["weapon"]
         },
         "partStates" : {
           "middle" : {
