@@ -39,7 +39,7 @@
             "windupTime" : 0.6,
             "windupStopForce" : 200,
 
-            "projectileType" : "spiretorpedo",
+            "projectileType" : "frosttorpedo",
             "fireOffset" : [0, -2.0],
             "fireSound" : "fire",
             "fireState" : "",
