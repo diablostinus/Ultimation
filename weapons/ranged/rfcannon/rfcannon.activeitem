@@ -16,9 +16,9 @@
   "animation" : "/items/active/weapons/ranged/gun.animation",
   "animationParts" : {
     "butt" : "",
-    "middle" : "/weapons/ranged/rfcannon/rfcannon.png",
+    "middle" : "rfcannon.png",
     "barrel" : "",
-    "muzzleFlash" : "/weapons/ranged/rfcannon/rfcannonmuzzle.png"
+    "muzzleFlash" : "rfcannonmuzzle.png"
   },
   "animationCustom" : {
     "animatedParts" : { "stateTypes" : { "middle" : {
@@ -34,7 +34,7 @@
         "properties" : {
           "centered" : true,
           "offset" : [1.5, 0],
-          "zLevel" : 0,
+          "zLevel" : 1,
           "transformationGroups" : ["weapon"],
           "fullbright" : true
         },
@@ -55,6 +55,8 @@
           "zLevel" : 1,
           "transformationGroups" : ["weapon"],
           "fullbright" : true
+          "zLevel" : 0,
+          "transformationGroups" : ["weapon"]
         },
         "partStates" : {
           "middle" : {
