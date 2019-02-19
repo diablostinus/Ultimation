@@ -1,0 +1,32 @@
+[
+  {
+    "name" : "infernoro",
+
+    "spawnParameters" : {
+      "area" : "ceiling",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 2],
+    "spawnChance" : 0.15,
+    "monsterType" : "infernoro",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  },
+ {
+    "name" : "crystong",
+
+    "spawnParameters" : {
+      "area" : "air",
+      "region" : "all",
+      "time" : "all"
+    },
+    "groupSize" : [1, 2],
+    "spawnChance" : 0.15,
+    "monsterType" : "crystong",
+    "monsterParameters" : {
+      "aggressive" : true
+    }
+  }
+]

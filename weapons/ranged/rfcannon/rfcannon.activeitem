@@ -52,7 +52,7 @@
         "properties" : {
           "centered" : true,
           "offset" : [1.5, 0],
-          "zLevel" : 0,
+          "zLevel" : 1,
           "transformationGroups" : ["weapon"],
           "fullbright" : true
         },
@@ -84,9 +84,9 @@
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
 
-    "fireTime" : 0.3,
+    "fireTime" : 0.35,
     "baseDps" : 39.5,
-    "energyUsage" : 65,
+    "energyUsage" : 55,
     "projectileCount" : 1,
     "inaccuracy" : 0.015,
 

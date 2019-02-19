@@ -1,6 +1,6 @@
 {
-  "projectileName" : "spiretorpedo",
-  "image" : "spiretorpedo.png",
+  "projectileName" : "frosttorpedo",
+  "image" : "frosttorpedo.png",
   "animationCycle" : 0.2,
   "lightColor" : [0, 0, 100],
   "frameNumber" : 2,
@@ -8,7 +8,7 @@
   "damageKindImage" : "icon.png",
   "physics" : "laser",  "timeToLive" : 8.5,
   "piercing" : true,
-  "bounces" : 0,  "statusEffects" : [
+  "bounces" : 10,  "statusEffects" : [
     "frostsnare"
   ]
 ,  "emitters" : [],
