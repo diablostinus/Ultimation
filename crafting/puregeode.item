@@ -1,0 +1,13 @@
+{
+  "itemName" : "puregeode",
+  "price" : 300,
+  "rarity" : "legendary",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "puregeode.png",
+  "description" : "These geodes are special as they have magical properties in them.",
+  "shortdescription" : "Pure Geode",
+  "itemTags" : [ "reagent" ],
+  "learnBlueprintsOnPickup" : [
+    ""
+  ]
+}
