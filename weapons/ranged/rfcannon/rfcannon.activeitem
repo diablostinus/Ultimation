@@ -56,7 +56,6 @@
           "transformationGroups" : ["weapon"],
           "fullbright" : true
           "zLevel" : 0,
-          "transformationGroups" : ["weapon"]
         },
         "partStates" : {
           "middle" : {

@@ -1,0 +1,17 @@
+[
+  {
+    "op": "replace",
+    "path": "/baseParameters/capturable",
+    "value": false
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/persistent",
+    "value": true
+  },
+  {
+    "op": "add",
+    "path": "/baseParameters/damageBar",
+    "value": "special"
+  }
+]
