@@ -1,0 +1,10 @@
+{
+  "name" : "ultimation_geodecrystalball",
+  "category" : "ultimation_geodecrystalball",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+	"bodyfullbright" : "bodyfullbright.png"
+  }
+}
