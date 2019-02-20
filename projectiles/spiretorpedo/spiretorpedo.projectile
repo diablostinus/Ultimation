@@ -10,8 +10,8 @@
   "piercing" : true,
   "bounces" : 10,  "statusEffects" : [
     "frostsnare"
-  ]
-,  "emitters" : [],
+  ],  
+  "emitters" : [],
   "periodicActions" : [
     {
       "time" : 0.05,
@@ -20,7 +20,12 @@
       "options" : [ "/sfx/gun/pulsecannon_blast1.ogg" ]
     }
   ],
-  "actionOnReap" : [],
+  "actionOnReap" : [
+    {
+	  "action" : "config",
+	  "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
+	}
+  ],
   "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
   "damageKind" : "ice",
 
