@@ -1,7 +1,7 @@
 {
   "type" : "husk",
   "shortdescription" : "Husk",
-  "description" : "A moontant that lost its color. . .",
+  "description" : "A moontant that lost its color due to the atmospheric conditions of its surroundings.",
 
   "categories" : [ "husk" ],
   "parts" : [ "body", "head" ],
@@ -57,7 +57,8 @@
             "gravityMultiplier": 0.6,
 
             "winddownState" : "fire",
-            "winddownTime" : 0.53          }
+            "winddownTime" : 0.53
+		  }
         }
       ],
 
