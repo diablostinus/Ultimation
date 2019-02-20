@@ -1,6 +1,6 @@
 {
   "itemName" : "rfcannon",
-  "level" : 12,
+  "level" : 25,
   "price" : 10080,
   "maxStack" : 1,
   "rarity" : "Legendary",
@@ -53,7 +53,6 @@
           "centered" : true,
           "offset" : [1.5, 0],
           "zLevel" : 0,
-          "transformationGroups" : ["weapon"]
         },
         "partStates" : {
           "middle" : {
