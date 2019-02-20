@@ -59,7 +59,7 @@
           "middle" : {
             "idle" : {
               "properties" : {
-                "image" : "rfcannon.png:idle.<frame><paletteSwaps>"
+                "image" : "rfcannon.png<paletteSwaps>"
               }
             }
           }
