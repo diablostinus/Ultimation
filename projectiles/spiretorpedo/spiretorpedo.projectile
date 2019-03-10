@@ -8,7 +8,7 @@
   "damageKindImage" : "icon.png",
   "physics" : "laser",  "timeToLive" : 8.5,
   "piercing" : true,
-  "bounces" : 10,  "statusEffects" : [
+  "bounces" : 3,  "statusEffects" : [
     "frostsnare"
   ],  
   "emitters" : [],

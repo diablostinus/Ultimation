@@ -1,7 +1,7 @@
 {
   "itemName" : "gigablade",
   "price" : 95000,
-  "level" : 7,
+  "level" : 120,
   "maxStack" : 1,
   "rarity" : "Legendary",
   "description" : "A sword that houses souls and its very fabric of nature.",
@@ -11,12 +11,12 @@
   "twoHanded" : true,
   "itemTags" : ["weapon","melee","broadsword"],
 
-  "inventoryIcon" : "gbblade.png",
+  "inventoryIcon" : "gigablade.png",
 
   "animation" : "/items/active/weapons/melee/broadsword/combobroadsword.animation",
   "animationParts" : {
-    "handle" : "gbhandle.png",
-    "blade" : "gbblade.png"
+    "handle" : "gigablade.png",
+    "blade" : ""
   },
   "animationCustom" : { },
 
@@ -26,11 +26,11 @@
 
   "primaryAbilityType" : "broadswordcombo",
   "primaryAbility" : {
-    "fireTime" : 1.5,
-    "baseDps" : 7.5
+    "fireTime" : 0.55,
+    "baseDps" : 27.5
   },
 
-  "altAbilityType" : "bladecharge",
+  "altAbilityType" : "risingslash",
 
   "builder" : "/items/buildscripts/buildunrandweapon.lua"
 }
