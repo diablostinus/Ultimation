@@ -1,0 +1,98 @@
+{
+  "itemName" : "carbine",
+  "price" : 10000,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "You havent felt freedom till you've seen it.",
+  "shortdescription" : "Carbine",
+  // "tooltipKind" : "gun",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun"],
+  "level" : 6,
+
+  "inventoryIcon" : [
+    { "image" : "carbine.png" }
+  ],
+
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "carbine.png",
+    "barrel" : "",
+    "muzzleFlash" : "carbineflash.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : ["/sfx/gun/plasma_shotgun3.ogg"]
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "color" : [150, 0, 0]
+      }
+    }
+  },
+
+  "baseOffset" : [0.125, 0.625],
+  "muzzleOffset" : [1.75, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.1,
+    "baseDps" : 18,
+    "energyUsage" : 65,
+    "projectileCount" : 2,
+    "inaccuracy" : 0.02,
+    "fireType" : "auto",
+
+    "projectileType" : "yellowplasmabullet",
+    "projectileParameters" : {
+      "knockback" : 5
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {
+      "physical" : { "projectileType" : "goldcrystalshard" }
+    },
+    "energyUsage" : 160
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}

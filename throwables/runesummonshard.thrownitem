@@ -1,0 +1,30 @@
+{
+  "itemName" : "runesummonshard",
+  "price" : 50,
+  "rarity" : "Common",
+  "category" : "throwableItem",
+  "inventoryIcon" : "runesummonshard.png",
+  "image" : "runesummonshard.png",
+  "shortdescription" : "Rune Summon Shard",
+  "description" : "Using this causes a spire eye to spawn on the location of the shard.",
+
+  "ammoUsage" : 1,
+
+  "edgeTrigger" : true,
+  "windupTime" : 0.0,
+  "cooldown" : 0.4,
+
+  "projectileType" : "runeshardspawn",
+  "projectileConfig" : {
+    "speed" : 25,
+    "power" : 40,
+    "periodicActions" : [
+      {
+        "time" : 0,
+        "repeat" : false,
+        "action" : "sound",
+        "options" : [ "/sfx/projectiles/throw_item.ogg" ]
+      }
+    ]
+  }
+}

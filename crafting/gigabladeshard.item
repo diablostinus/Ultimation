@@ -4,10 +4,8 @@
   "rarity" : "legendary",
   "category" : "craftingMaterial",
   "inventoryIcon" : "gigabladeshard.png",
-  "description" : "It's a Shard of a Gigablade, perhaps you can make use of this piece?",
+  "description" : "A shard which is used to make powerful weapons.",
   "shortdescription" : "Gigablade Shard",
   "itemTags" : [ "reagent" ],
-  "learnBlueprintsOnPickup" : [
-    "gigablade"
-  ]
+  "learnBlueprintsOnPickup" : [ "gigablade" ]
 }

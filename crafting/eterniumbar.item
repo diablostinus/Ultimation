@@ -1,0 +1,10 @@
+{
+  "itemName" : "eterniumbar",
+  "price" : 140,
+  "rarity" : "legendary",
+  "category" : "craftingMaterial",
+  "inventoryIcon" : "eterniumbar.png",
+  "description" : "Extremely durable, used to make extremely power weapons..",
+  "shortdescription" : "Eternium Bar",
+  "itemTags" : [ "reagent" ]
+}

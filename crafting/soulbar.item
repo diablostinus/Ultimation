@@ -4,10 +4,8 @@
   "rarity" : "legendary",
   "category" : "craftingMaterial",
   "inventoryIcon" : "soulbar.png",
-  "description" : "These are rare to find, you are lucky to find one.",
+  "description" : "When you listen closely, you can hear the souls.",
   "shortdescription" : "Soul Bar",
   "itemTags" : [ "reagent" ],
-  "learnBlueprintsOnPickup" : [
-    "soulpowder"
-  ]
+  "learnBlueprintsOnPickup" : [ "soulpowder" ]
 }

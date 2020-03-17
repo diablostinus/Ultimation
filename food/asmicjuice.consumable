@@ -8,21 +8,26 @@
   "shortdescription" : "Asmic Juice",
   "effects" : [ [
     {
-        "effect" : "redstim",
-        "duration" : 20    },
+        "effect" : "nanowrapheal",
+        "duration" : 120   
+    },
     {
         "effect" : "regeneration4",
-        "duration" : 20
+        "duration" : 120  
+    },
+    {
+        "effect" : "nofalldamage",
+        "duration" : 120   
     }
   ] ],
-  "foodValue" : 40,
+  "foodValue" : 85,
   "tooltipKind" : "food",
   "builder" : "/items/buildscripts/buildfood.lua",
   "maxStack" :2500,
   "itemAgingScripts" : ["/scripts/items/rotting.lua"],
-  "rottingMultiplier" : 200.5,
+  "rottingMultiplier" : 9999.9,
   "blockingEffects" : [
-    "regeneration4"
+    "redstim"
   ],
   "emitters" : [ "drinking" ]
 }

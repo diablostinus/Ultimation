@@ -1,0 +1,98 @@
+{
+  "itemName" : "protoshardlauncher",
+  "price" : 1080,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "'Is it because im too green for this world?'",
+  "shortdescription" : "Proto Shard Launcher",
+  // "tooltipKind" : "gun",
+  "category" : "uniqueWeapon",
+  "twoHanded" : true,
+  "itemTags" : ["weapon","ranged","shotgun"],
+  "level" : 8,
+
+  "inventoryIcon" : [
+    { "image" : "protoshardlauncher.png" }
+  ],
+
+  "animation" : "/items/active/weapons/ranged/gun.animation",
+  "animationParts" : {
+    "butt" : "",
+    "middle" : "protoshardlauncher.png",
+    "barrel" : "",
+    "muzzleFlash" : "shardlauncherflash.png"
+  },
+  "animationCustom" : {
+    "sounds" : {
+      "fire" : ["/sfx/gun/plasma_shotgun3.ogg"]
+    },
+    "lights" : {
+      "muzzleFlash" : {
+        "color" : [150, 0, 0]
+      }
+    }
+  },
+
+  "baseOffset" : [0.125, 0.625],
+  "muzzleOffset" : [1.75, 0],
+
+  "scripts" : ["/items/active/weapons/ranged/gun.lua"],
+
+  "elementalType" : "physical",
+
+  "primaryAbility" : {
+    "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
+    "class" : "GunFire",
+
+    "fireTime" : 0.025,
+    "baseDps" : 30,
+    "energyUsage" : 40,
+    "projectileCount" : 5,
+    "inaccuracy" : 0.05,
+    "fireType" : "auto",
+
+    "projectileType" : "protobomb",
+    "projectileParameters" : {
+      "knockback" : 20
+    },
+
+    "stances" : {
+      "idle" : {
+        "armRotation" : 0,
+        "weaponRotation" : 0,
+        "twoHanded" : true,
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "fire" : {
+        "duration" : 0,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "cooldown" : {
+        "duration" : 0.2,
+        "armRotation" : 8,
+        "weaponRotation" : 8,
+        "twoHanded" : true,
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  },
+
+  "altAbilityType" : "grenadelauncher",
+  "altAbility" : {
+    "elementalConfig" : {
+      "physical" : { "projectileType" : "ultimation_geodecrystalballproj" }
+    },
+    "energyUsage" : 30
+  },
+
+  "builder" : "/items/buildscripts/buildunrandweapon.lua"
+}
