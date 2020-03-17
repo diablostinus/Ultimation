@@ -1,0 +1,108 @@
+{
+  "projectileName" : "ultimation_geodecrystalballproj",
+  "image" : "ultimation_geodecrystalballproj.png",
+  "animationCycle" : 2,
+  "lightColor" : [130, 150, 100],
+  "frameNumber" : 4,
+  "flippable" : false,
+  "fullbright" : true,
+  "damageKindImage" : "icon.png",
+  "physics" : "grenade",
+  "emitters" : [ ],
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/globeexplosions/greenglobeexplosion/greenglobeexplosion.config"
+    },
+	{
+	  "action" : "projectile",
+	  "type" : "orbitalup",
+	  "inheritDamageFactor" : 1,
+	  "config" : {
+	    "speed" : 0,
+		"timeToLive" : 0,
+	    "actionOnReap" : [
+		  {
+		    "action" : "projectile",
+			"type" : "ultimation_geodecrystal",
+			"angleAdjust" : 0,
+			"config" : {
+			  "bounces" : 1
+			}
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "ultimation_geodecrystal",
+			"angleAdjust" : 10,
+			"config" : {
+			  "bounces" : 1
+			}
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "ultimation_geodecrystal",
+			"angleAdjust" : -10,
+			"config" : {
+			  "bounces" : 1
+			}
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "ultimation_geodecrystal",
+			"angleAdjust" : 20,
+			"config" : {
+			  "bounces" : 1
+			}
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "ultimation_geodecrystal",
+			"angleAdjust" : -20,
+			"config" : {
+			  "bounces" : 1
+			}
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "ultimation_geodecrystal",
+			"angleAdjust" : 15,
+			"config" : {
+			  "bounces" : 1
+			}
+		  },
+		  {
+		    "action" : "projectile",
+			"type" : "ultimation_geodecrystal",
+			"angleAdjust" : -15,
+			"config" : {
+			  "bounces" : 1
+			}
+		  }
+		]
+	  }
+	}
+  ],
+  "periodicActions" : [
+    {
+      "time" : 0.066,
+      "repeat" : true,
+      "action" : "particle",
+      "rotate" : true,
+      "specification" : {
+        "type" : "textured",
+        "image" : "/projectiles/npcs/ultimation_geodecrystalballproj/ultimation_geodecrystalballproj.png:2?setcolor=aaffaa",
+        "position" : [0, 0],
+        "layer" : "back",
+        "timeToLive" : 0.0,
+        "destructionTime" : 0.2,
+        "destructionAction" : "fade",
+        "fullbright" : true
+      }
+    }
+  ],
+  "damagePoly" : [ [-9, 0], [-6, -6], [0, -9], [6, -6], [9, 0], [6, 6], [0, 9], [-6, 6] ],
+  "damageKind" : "poisonplasma",
+
+  "speed" : 50,
+  "timeToLive" : 2.5
+}

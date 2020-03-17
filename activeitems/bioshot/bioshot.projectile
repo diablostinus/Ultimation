@@ -1,0 +1,23 @@
+{
+  "projectileName" : "bioshot",
+  "physics" : "laser",
+  "bounces" : 0,
+  "image" : "bioshot.png",
+  "fullbright" : true,
+  "animationCycle" : 1,
+  "frameNumber" : 1,
+  "power" : 50,
+  "speed" : 50,
+  "actionOnReap" : [
+    {
+      "action" : "sound",
+      "options" : [ "/sfx/gun/impact_plasma.ogg" ]
+    },
+   {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/poisonexplosionknockback.config"
+    }
+  ],
+  "damageKind" : "poisonplasma",
+  "statusEffects" : ["acidicburn"]
+}

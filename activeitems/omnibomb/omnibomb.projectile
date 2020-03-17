@@ -1,0 +1,61 @@
+{
+  "projectileName" : "omnibomb",
+  "physics" : "laser",
+  "bounces" : 15,
+  "timeToLive" : 1.5,
+  "image" : "omnibomb.png",
+  "animationCycle" : 5,
+  "lightColor" : [105, 64, 0],
+  "frameNumber" : 7,
+  "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/bombblockexplosion/bombblockexplosion.config"
+    },
+    {
+      "action" : "projectile",
+      "type" : "omniexbomb",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0.8,
+      "angleAdjust" : -10
+    },
+    {
+      "action" : "projectile",
+      "type" : "omniexbomb",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 1,
+      "angleAdjust" : -5
+    },
+    {
+      "action" : "projectile",
+      "type" : "omniexbomb",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 1.2,
+      "angleAdjust" : 0
+    },
+    {
+      "action" : "projectile",
+      "type" : "omniexbomb",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 1,
+      "angleAdjust" : 5
+    },
+    {
+      "action" : "projectile",
+      "type" : "omniexbomb",
+      "fuzzAngle" : 10,
+      "inheritDamageFactor" : 1,
+      "inheritSpeedFactor" : 0.8,
+      "angleAdjust" : 10
+    }
+  ],
+  "power" : 200,
+  "damageType" : "NoDamage",
+  "damageKind" : "default",
+  "damagePoly" : [ [-6, 0], [-4, -4], [0, -6], [4, -4], [6, 0], [4, 4], [0, 6], [-4, 4] ],
+  "emitters" : [ "sparks" ]
+}

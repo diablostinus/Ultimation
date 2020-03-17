@@ -1,0 +1,27 @@
+{
+  "projectileName" : "spireblastwindup",
+  "physics" : "laser",
+  "bounces" : 0,
+  "speed" : 0,
+  "timeToLive" : 0.4,
+  "damageKindImage" : "icon.png",
+  "image" : "spireblastwindup.png",
+  "animationCycle" : 0.4,
+  "frameNumber" : 9,
+  "power" : 2,
+  "damagePoly" : [ [-20, 8], [-20, -8], [20, 0] ],
+  "supportsProcessing" : true,
+  "actionOnReap" : [
+    {
+      "action" : "projectile",
+      "type" : "spireblast",
+	  "inheritDamageFactor" : 1
+    },
+	{
+	  "action" : "sound",
+      "options" : [ "/sfx/npc/boss/kluexboss_iceeruption1.ogg", "/sfx/npc/boss/kluexboss_iceeruption2.ogg" ]
+	}
+  ],
+  "damageKind" : "ice",
+  "onlyHitTerrain" : true
+}

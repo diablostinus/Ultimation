@@ -1,0 +1,19 @@
+{
+  "projectileName" : "ultimation_geodecrystalballwindup",
+  "image" : "/projectiles/invisibleprojectile/invisibleprojectile.png",
+  "frameNumber" : 1,
+  "speed" : 0,
+  "power" : 0,
+  "onlyHitTerrain" : true,
+  "animationLoops" : false,
+  "flippable" : true,
+  "damageKind" : "default",
+  "timeToLive" : 0,
+  "actionOnReap" : [
+    {
+	  "action" : "projectile",
+	  "type" : "ultimation_geodecrystalballproj",
+	  "offsetRange" : [3, 3, -3, -3]
+	}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "projectileName" : "goldcrystalshard",
+  "physics" : "laser",
+  "bounces" : 20,
+  "timeToLive" : 5.5,
+  "damageKindImage" : "icon.png",
+  "lightColor" : [0, 0, 0],
+  "image" : "goldcrystalshard.png",
+  "animationLoops" : false,
+  "animationCycle" : 0.4,
+  "frameNumber" : 4,
+  "speed" : 80,
+  "power" : 5.5,
+  "damageKind" : "default"
+}

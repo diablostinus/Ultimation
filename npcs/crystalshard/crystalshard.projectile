@@ -1,0 +1,21 @@
+{
+  "projectileName" : "crystalshard",
+  "physics" : "grenade",
+  "bounces" : 10,
+  "timeToLive" : 0.2,
+  "damageKindImage" : "crystalshardicon.png",
+  "image" : "crystalshard.png",
+  "animationLoops" : false,
+  "animationCycle" : 0.6,
+  "frameNumber" : 5,
+  "emitters" : [ "iceplasmarocket" ],
+    "actionOnReap" : [
+    {
+      "action" : "config",
+      "file" : "/projectiles/explosions/regularexplosion2/iceexplosionknockback.config"
+    }
+	],
+  "speed" : 30,
+  "power" : 0.1,
+  "damageKind" : "ice"
+}
