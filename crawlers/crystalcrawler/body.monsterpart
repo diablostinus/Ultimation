@@ -1,0 +1,9 @@
+{
+  "name" : "crystalcrawler",
+  "category" : "crystalcrawler",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "crystalcrawler.png"
+  }
+}

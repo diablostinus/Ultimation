@@ -1,0 +1,225 @@
+{
+  "type" : "crystalcrawler",
+  "shortdescription" : "Crystal Crawler",
+  "description" : "Its been infused with enough heat to burn through anything.",
+
+  "categories" : [ "crystalcrawler" ],
+  "parts" : [ "body" ],
+
+  "animation" : "crystalcrawler.animation",
+
+  "dropPools" : [ { "default" : "crustoiseTreasure", "bow" : "crustoiseHunting" } ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+    "deathBehavior" : "monster-death",
+
+    "facingMode" : "transformation",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetQueryRange" : 20,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 50,
+      "targetOutOfSightTime" : 5.0,
+
+      "foundTargetActions" : [
+        {
+          "name" : "action-aggrohop",
+          "parameters" : {
+            "onGround" : false,
+            "resetRotation" : true
+          }
+        }
+      ],
+
+      "fleeActions" : [ ],
+
+      "hostileActions" : [
+        {
+          "name" : "action-charge",
+          "parameters" : {
+            "minimumRange" : 2,
+            "maximumRange" : 12,
+            "windupTime" : 0.5,
+
+            "chargeTime" : [0.85, 2.25],
+            "chargeSpeed" : 35,
+            "chargeControlForce" : 200,
+            "wallKnockback" : true,
+            "wallCrashSound" : "wallCrash",
+            "wallCrashEmitter" : "",
+
+            "winddownTime" : 0.35
+          }
+        }
+      ],
+
+      "periodicActions" : [ ],
+
+      "approachActions" : [
+        {
+          "name" : "approach-crawl"
+        }
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-crawl"
+        }
+      ],
+
+      "wanderActions" : [
+        {
+          "name" : "wander-crawl",
+          "cooldown" : [3,6],
+          "parameters" : {
+            "wanderTime" : [2,4],
+            "idleTime" : [3,6],
+            "stopForce" : 200
+          }
+        }
+      ],
+
+      "deathActions" : [
+        {
+          "name" : "action-projectile",
+          "parameters" : {
+            "projectileCount" : 1,
+            "projectileType" : "crustioseshell",
+            "projectileParameters" : {},
+            "aimDirection" : [-1, 2],
+            "inaccuracy" : 0,
+            "fireOffset" : [0, 0.4]
+          }
+        }
+      ],
+
+      "concurrentActions" : [ ],
+
+      "concurrentHostileActions" : [ ]
+    },
+
+    "touchDamage" : {
+      "poly" : [ [0.31, 0.75],  [0.75, 0.31],  [0.75, -0.31],  [0.31, -0.75],  [-0.31, -0.75],  [-0.75, -0.31],  [-0.75, 0.31],  [-0.31, 0.75] ],
+      "damage" :25,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "slash",
+      "knockback" : 45,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [0.31, 0.75],  [0.75, 0.31],  [0.75, -0.31],  [0.31, -0.75],  [-0.31, -0.75],  [-0.75, -0.31],  [-0.75, 0.31],  [-0.31, 0.75] ],
+
+      "mass" : 1.0,
+      "walkSpeed" : 6,
+      "runSpeed" : 9    },
+
+    "bodyMaterialKind" : "stone",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "stone"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 85
+        },
+        "maxHealth" : {
+          "baseValue" : 185
+        },
+        "protection" : {
+          "baseValue" : 55.5
+        },
+        "healthRegen" : {
+          "baseValue" : 1.25        
+		},
+        "powerMultiplier" : {
+          "baseValue" : 1.25        
+		},
+        "physicalResistance" : {
+          "baseValue" : 0.6        
+		},
+        "fireResistance" : {
+          "baseValue" : 5.5
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 5.5        
+		},
+        "iceResistance" : {
+          "baseValue" : 0.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "electricResistance" : {
+          "baseValue" : 0.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 0.0
+        },
+        "poisonResistance" : {
+          "baseValue" : -0.5
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 0.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : true,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255],
+    "captureCollectables" : { "monsters" : "crustoise" }
+  }
+}

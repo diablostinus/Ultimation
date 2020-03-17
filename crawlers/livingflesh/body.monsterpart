@@ -1,0 +1,9 @@
+{
+  "name" : "livingflesh",
+  "category" : "livingflesh",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "livingflesh.png"
+  }
+}

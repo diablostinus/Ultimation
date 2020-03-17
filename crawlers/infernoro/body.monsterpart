@@ -1,0 +1,9 @@
+{
+  "name" : "infernoro",
+  "category" : "infernoro",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "infernoro.png"
+  }
+}

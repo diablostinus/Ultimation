@@ -1,0 +1,9 @@
+{
+  "name" : "astraltop",
+  "category" : "astraltop",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "astraltop.png"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name" : "head6",
+  "category" : "husk",
+  "type" : "head",
+
+  "frames" : {
+    "head" : "head6.png"
+  },
+
+  "parameters" : { }
+}
