@@ -1,0 +1,60 @@
+{
+  "itemName" : "runewhip",
+  "price" : 50000,
+  "level" : 18,
+  "maxStack" : 1,
+  "rarity" : "Legendary",
+  "description" : "Its COLD and SHOCKINGLY deadlly!",
+  "shortdescription" : "Rune Whip",
+  "tooltipKind" : "sword",
+  "category" : "whip",
+  "twoHanded" : true,
+  "itemTags" : ["weapon"],
+
+  "inventoryIcon" : "runewhip.png:idle",
+  "animation" : "runewhip.animation",
+  "animationParts" : {
+    "weapon" : "runewhip.png",
+    "weaponFullbright" : "runewhipfullbright.png"
+  },
+  "animationCustom" : {
+    "lights" : { "glow" : {
+      "active" : true,
+      "position" : [0.75, 0.5],
+      "color" : [40, 73, 117]
+    }},
+    "particleEmitters" : { "crack" : { "particles" : [ ]}},
+    "sounds" : {
+      "swing" : [ "/sfx/melee/mech_energysword_swing1.ogg", "/sfx/melee/mech_energysword_swing2.ogg", "/sfx/melee/mech_energysword_swing3.ogg" ],
+      "crack" : [ "/sfx/tech/hoverbike_bump1.ogg", "/sfx/tech/hoverbike_bump2.ogg", "/sfx/tech/hoverbike_bump3.ogg" ]
+    }
+  },
+
+  "chain" : {
+    "startOffset" : [0.625, 0],
+    "length" : [0.0005, 50],
+    "segmentImage" : "/items/active/weapons/whip/runebeam.png",
+    "endSegmentImage" : "/items/active/weapons/whip/runebeamend.png",
+    "segmentSize" : 0.375,
+    "fullbright" : true
+  },
+
+  "scripts" : [ "whip.lua" ],
+
+  "primaryAbilityType" : "whipcrack",
+  "primaryAbility" : {
+    "fireTime" : 0.025,
+    "chainDps" : 5.25,
+    "crackDps" : 45.55,
+
+    "damageConfig" : {
+      "damageSourceKind" : "ice"
+    },
+
+    "projectileType" : "runeshard"
+  },
+
+  "altAbilityType" : "energyorb",
+
+  "builder" : "/items/buildscripts/buildwhip.lua"
+}

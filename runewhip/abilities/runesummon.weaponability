@@ -1,0 +1,55 @@
+{
+  "animationParts" : { },
+  "animationCustom" : {
+    "sounds" : {
+      "fireOrb" : [ "/sfx/melee/astraltear1.ogg", "/sfx/melee/astraltear2.ogg" ]
+    }
+  },
+
+  "ability" : {
+    "name" : "Runic Shard",
+    "type" : "runesummon",
+    "scripts" : ["/items/active/weapons/whip/abilities/energyorb.lua"],
+    "class" : "RuneSummon",
+
+    "projectileOffset" : [4, 0],
+    "projectileType" : "runeshardspawn",
+
+    "baseDamage" : 2.5,
+    "energyUsage" : 20,
+    "cooldownTime" : 0.025,
+
+    "stances" : {
+      "windup" : {
+        "duration" : 0.25,
+        "armRotation" : 100,
+        "weaponRotation" : 0,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.625],
+
+        "allowRotate" : true,
+        "allowFlip" : true
+      },
+      "extend" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      },
+      "fire" : {
+        "duration" : 0.1,
+        "armRotation" : 0,
+        "weaponRotation" : -90,
+        "weaponRotationCenter" : [0.0, 0.0],
+        "weaponOffset" : [-1.3, 0.875],
+
+        "allowRotate" : false,
+        "allowFlip" : false
+      }
+    }
+  }
+}
