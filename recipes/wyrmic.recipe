@@ -1,8 +1,11 @@
 {
   "input" : [
+    { "item" : "diamond", "count" : 10 },
+    { "item" : "teleportercore", "count" : 10 },
+    { "item" : "manipulatormodule", "count" : 1000 },
     { "item" : "refinedferozium", "count" : 1000 },
-    { "item" : "cryonicextract", "count" : 1000 }
-,   { "item" : "dragonhead", "count" :1 }    ],
+    { "item" : "cryonicextract", "count" : 250 },
+    { "item" : "dragonhead", "count" :1 }    ],
   "output" : { "item" : "wyrmic", "count" : 1 },
   "groups" : [ "craftingmanipulator", "weapons", "all" ]
 }

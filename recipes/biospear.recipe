@@ -1,0 +1,10 @@
+{
+  "input" : [
+    { "item" : "phasematter", "count" : 250 },
+    { "item" : "aegisaltore", "count" : 1000 },
+    { "item" : "refinedaegisalt", "count" : 1000 },
+    { "item" : "toxicwaste", "count" : 1000 },
+    { "item" : "venomsample", "count" :250 }    ],
+  "output" : { "item" : "biospear", "count" : 1 },
+  "groups" : [ "craftingaccelerator", "weapons", "all" ]
+}

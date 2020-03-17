@@ -1,7 +1,8 @@
 {
   "input" : [
-    { "item" : "soulpowder", "count" : 5 },
-    { "item" : "volatilepowder", "count" : 15 }
+    { "item" : "soulpowder", "count" : 12 },
+    { "item" : "volatilepowder", "count" : 2 },
+	{ "item" : "corefragmentore", "count" : 1 }
   ],
   "output" : { "item" : "gigabladeshard", "count" : 1 },
   "groups" : [ "craftingfurnace", "bars", "all" ]

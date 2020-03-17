@@ -1,12 +1,13 @@
 {
   "input" : [
    { "item" : "copperbar", "count" : 10 },
-   { "item" : "coalore", "count" : 5 }
+   { "item" : "coalore", "count" : 3 },
+   { "item" : "corefragmentore", "count" : 2 }
   ],
   "output" : {
     "item" : "soulbar",
-    "count" : 2
+    "count" : 5
   },
-  "duration" : 0.45,
+  "duration" : 0.20,
   "groups" : [ "craftingfurnace", "bars", "all" ]
 }

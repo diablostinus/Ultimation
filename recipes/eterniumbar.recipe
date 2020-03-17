@@ -1,0 +1,14 @@
+{
+  "input" : [
+   { "item" : "soulbar", "count" : 2 },
+   { "item" : "durasteelbar", "count" : 1 },
+   { "item" : "diamond", "count" : 1 },
+   { "item" : "titaniumbar", "count" : 1 }
+  ],
+  "output" : {
+    "item" : "eterniumbar",
+    "count" : 5
+  },
+  "duration" : 0.20,
+  "groups" : [ "craftingfurnace", "bars", "all" ]
+}

@@ -1,0 +1,15 @@
+{
+  "name" : "acidicburn",
+  "blockingStat" : "",
+
+  "effectConfig" : {},
+  "defaultDuration" : 2.0,
+
+  "scripts" : [
+    "acidicburn.lua"
+  ],
+
+  "animationConfig" : "acidicburn.animation",
+  "label" : "Your entire skin is melting!",
+  "icon" : "/interface/statuses/acidicburn.png"
+}
