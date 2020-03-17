@@ -1,0 +1,9 @@
+{
+  "name" : "crystong",
+  "category" : "crystong",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "crystong.png"
+  }
+}

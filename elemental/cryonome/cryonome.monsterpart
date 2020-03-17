@@ -1,0 +1,10 @@
+{
+  "name" : "cryonome",
+  "category" : "cryonome",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "cryonome.png",
+    "bodynobright" : "cryonomenobright.png"
+  }
+}

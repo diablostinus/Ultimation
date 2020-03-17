@@ -1,0 +1,9 @@
+{
+  "name" : "flaretop",
+  "category" : "flaretop",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "flaretop.png"
+  }
+}

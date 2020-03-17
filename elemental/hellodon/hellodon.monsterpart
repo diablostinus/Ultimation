@@ -1,0 +1,9 @@
+{
+  "name" : "hellodon",
+  "category" : "hellodon",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "hellodon.png"
+  }
+}

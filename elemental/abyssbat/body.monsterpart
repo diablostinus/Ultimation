@@ -1,0 +1,9 @@
+{
+  "name" : "abyssbat",
+  "category" : "abyssbat",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "abyssbat.png"
+  }
+}

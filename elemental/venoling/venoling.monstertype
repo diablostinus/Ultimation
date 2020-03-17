@@ -1,0 +1,205 @@
+{
+  "type" : "venoling",
+  "shortdescription" : "Venoling",
+  "description" : "Lost its ability to grow due to unforseen force.",
+
+  "categories" : [ "venoling" ],
+  "parts" : [ "body" ],
+
+  "animation" : "venoling.animation",
+  "reversed" : false,
+
+  "dropPools" : [ "ixolingTreasure" ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetQueryRange" : 100,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 60,
+      "targetOutOfSightTime" : 2.5,
+
+      "hostileActions" : [
+        {
+          "name" : "action-leap",
+          "cooldown" : 3,
+          "parameters" : {
+            "minimumRange" : 0,
+            "maximumRange" : 20,
+            "windupState" : "attack",
+            "windupTime" : 0.25,
+
+            "leapVelocity" : 40,
+            "collisionCheck" : true,
+            "highArc" : false,
+            "leapState" : "attack",
+            "fallState" : "fall",
+
+            "winddownTime" : 0.5,
+            "winddownState" : "idle"
+          }
+        },
+		{
+          "name" : "action-fire",
+          "cooldown" : 0.5,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maxYRange" : 2,
+            "maximumRange" : 15,
+            "minimumRange" : 1,
+            "windupState" : "firewindup",
+            "windupTime" : 0.4,
+
+            "projectileType" : "snauntspit",
+            "fireOffset" : [1, 0.35],
+            "projectileCount" : 3,
+            "projectileInterval" : 0.2,
+            "aimDirection" : [1, 0],
+            "aimAtTarget" : false,
+            "fireSound" : "fire",
+            "fireState" : "fire",
+
+            "winddownState" : "firewinddown",
+            "winddownTime" : 0.3
+          }
+        }
+      ],
+
+      "periodicActions" : [],
+
+      "approachActions" : [
+        {
+          "name" : "approach-walk",
+          "parameters" : {
+            "canJump" : true,
+            "maxJumps" : 2,
+            "jumpXVelocity" : 12,
+            "jumpYVelocity" : 30,
+            "jumpXControlForce" : 15,
+            "jumpState" : "attack",
+            "fallState" : "fall"
+          }
+        }
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "approach-walk",
+          "parameters" : {
+            "canJump" : true,
+            "maxJumps" : 4,
+            "jumpXVelocity" : 12,
+            "jumpYVelocity" : 30,
+            "jumpXControlForce" : 15,
+            "jumpState" : "attack",
+            "fallState" : "fall"
+          }
+        }
+      ]
+    },
+
+    "pathing" : {
+      "canOpenDoors" : true
+    },
+
+    "scale" : 1.0,
+
+    "knockoutTime" : 0.3,
+    "knockoutEffect" : "",
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-1, -0.6], [-0.6, -1], [0.6, -1], [1, -0.6], [1, 0.6], [0.6, 1], [-0.6, 1], [-1, 0.6] ],
+      "mass" : 1.0,
+      "walkSpeed" : 4,
+      "runSpeed" : 12
+    },
+    "metaBoundBox" : [-2, -2, 2, 2],
+
+    "touchDamage" : {
+      "poly" : [ [-1, -0.6], [-0.6, -1], [0.6, -1], [1, -0.6], [1, 0.6], [0.6, 1], [-0.6, 1], [-1, 0.6] ],
+      "damage" : 40,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "acid",
+      "knockback" : 20,
+      "statusEffects" : [ "acidicburn" ]
+    },
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "organic"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 65
+        },
+        "maxHealth" : {
+          "baseValue" : 75
+        },
+        "protection" : {
+          "baseValue" : 14.5
+        },
+        "healthRegen" : {
+          "baseValue" : 14.5
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 9999.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 9999.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.25
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [1.0, -1.5],
+    "feetOffset" : [0, -21],
+    "capturable" : true,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255]
+  }
+}

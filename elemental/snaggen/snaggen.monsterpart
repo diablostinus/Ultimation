@@ -1,0 +1,9 @@
+{
+  "name" : "snaggen",
+  "category" : "snaggen",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "snaggen.png"
+  }
+}

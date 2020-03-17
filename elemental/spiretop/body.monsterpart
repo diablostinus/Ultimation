@@ -1,0 +1,9 @@
+{
+  "name" : "spiretop",
+  "category" : "spiretop",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "spiretop.png"
+  }
+}
