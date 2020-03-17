@@ -1,3 +1,8 @@
 [
-{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"wyrmic"}}
+{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"wyrmic"}},
+{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"biospear"}},
+{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"soulbar"}},
+{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"gigabladeshard"}},
+{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"soulpowder"}},
+{"op":"add","path":"/defaultBlueprints/tier1/-","value":{"item":"gigablade"}}
 ]

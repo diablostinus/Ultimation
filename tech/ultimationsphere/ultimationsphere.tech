@@ -1,0 +1,83 @@
+{
+  "name" : "ultimationsphere",
+  "type" : "head",
+
+  "scripts" : ["ultimationsphere.lua"],
+  "animator" : "ultimationsphere.animation",
+
+  "description" : "Turn into the legendary Ultimation Sphere! ^green;[F]",
+  "shortDescription" : "Ultimation Sphere",
+  "rarity" : "Legendary",
+  "icon" : "/tech/ultimationsphere.png",
+
+  "chipCost" : 2,
+
+  "animationParts" : {
+    "ballGlow" : "ultimationsphereglow.png",
+    "ball" : "ultimationsphere.png"
+  },
+
+  "transformedMovementParameters" : {
+    "collisionPoly" : [ [-0.85, -0.45], [-0.45, -0.85], [0.45, -0.85], [0.85, -0.45], [0.85, 0.45], [0.45, 0.85], [-0.45, 0.85], [-0.85, 0.45] ],
+
+    "groundForce" : 450.0,
+    "normalGroundFriction" : 1.8,
+    "ambulatingGroundFriction" : 0.2,
+    "slopeSlidingFactor" : 5.0,
+    "liquidBuoyancy" : 5.0,
+
+    "airJumpProfile" : {
+      "jumpSpeed" : 25,
+      "jumpControlForce" : 800.0,
+      "jumpInitialPercentage" : 1.0,
+      "jumpHoldTime" : 0.5
+    },
+
+    "liquidJumpProfile" : {
+      "jumpSpeed" : 20,
+      "jumpControlForce" : 0.0,
+
+      "multiJump" : true,
+      "autoJump" : true
+    }
+  },
+  "transformedMovementParameters2" : {
+    "collisionPoly" : [ [-0.85, -0.35], [-0.35, -0.85], [0.35, -0.85], [0.85, -0.35], [0.85, 0.35], [0.35, 0.85], [-0.35, 0.85], [-0.85, 0.35] ],
+
+    "airForce" : 0.0,
+    "liquidForce" : 0.0,
+
+    "airJumpProfile" : {
+      "jumpSpeed" : 0.0
+    },
+
+    "liquidJumpProfile" : {
+      "jumpSpeed" : 50.0,
+      "jumpControlForce" : 0.0,
+
+      "multiJump" : true,
+      "autoJump" : true
+    }
+  },
+
+  "ballSpeed" : 50,
+  "ballSpikeSpeed" : 15,
+
+  "energyCost" : 5,
+
+  "ballRadius" : 1,
+  "ballFrames" : 4,
+
+  "damageDisableTime" : 0.2,
+
+  "ignorePlatforms" : false,
+  "blinkOutTime" : 0.10,
+  "blinkInTime" : 0.10,
+  "dashCooldown" : 0.10,
+  "projectileType" : "darknessblast",
+  "projectileParameters" : {"speed" : 50},
+  "altProjectileType" : "megadarknessblast",
+  "altProjectileParameters" : {"speed" : 100},
+  "fireCooldown" : 0.10,
+  "altFireCooldown" : 0.10
+}
