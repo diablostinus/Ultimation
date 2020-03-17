@@ -1,0 +1,9 @@
+{
+  "name" : "spirecrystal",
+  "category" : "spirecrystal",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "spirecrystal.png"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name" : "spirecrystalx",
+  "category" : "spirecrystalx",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "body.png",
+	"bodyfullbright" : "bodyfullbright.png"
+  }
+}

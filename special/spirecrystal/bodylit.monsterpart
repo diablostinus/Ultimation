@@ -1,0 +1,9 @@
+{
+  "name" : "spirecrystallit",
+  "category" : "spirecrystal",
+  "type" : "bodylit",
+
+  "frames" : {
+    "bodylit" : "spirecrystallit.png"
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "type" : "spiretotem",
+  "shortdescription" : "Spire Totem",
+  "description" : "It's usually summoned by spire crystals to defend them.",
+
+  "categories" : [ "spiretotem" ],
+  "parts" : [ "body" ],
+
+  "animation" : "spiretotem.animation",
+
+  "dropPools" : [ { "default" : "wisperTreasure", "bow" : "gleapHunting" } ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetQueryRange" : 20,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 50,
+      "targetOutOfSightTime" : 5.0,
+
+      "foundTargetActions" : [ { "name" : "action-aggrohop" } ],
+
+      "hostileActions" : [
+        {
+          "name" : "action-hop",
+          "cooldown" : 0.0,
+          "parameters" : {
+            "verticalSpeed" : 15,
+            "horizontalSpeed" : 20,
+            "hopSequence" : 1,
+            "timeBetweenHops" : 0.0,
+            "windupTime" : 0.1,
+            "landTime" : 0.1,
+            "hopAwayFromWall" : false,
+            "wallVerticalSpeed" : 35
+          }
+        }
+      ],
+
+      "periodicActions" : [
+        {
+          "name" : "action-hop",
+          "cooldown" : 0.0,
+          "parameters" : {
+            "verticalSpeed" : 15,
+            "horizontalSpeed" : 20,
+            "hopSequence" : 3,
+            "timeBetweenHops" : 0.25,
+            "hopAwayFromWall" : true
+          }
+        }
+      ],
+
+      "followActions" : [
+        {
+          "name" : "approach-teleport",
+          "parameters" : {
+          }
+        },
+        {
+          "name" : "action-hop",
+          "cooldown" : 0.0,
+          "parameters" : {
+            "verticalSpeed" : 15,
+            "horizontalSpeed" : 20,
+            "hopSequence" : 1,
+            "timeBetweenHops" : 0.0,
+            "windupTime" : 0.1,
+            "landTime" : 0.1,
+            "hopAwayFromWall" : false,
+            "wallVerticalSpeed" : 35
+          }
+        }
+      ]
+
+    },
+
+    "touchDamage" : {
+      "poly" : [ [-0.6875, -0.375], [-0.4375, -0.625], [0.4375, -0.625], [0.6875, -0.375], [0.6875, 0.25], [0.4375, 0.5], [-0.4375, 0.5], [-0.6875, 0.25] ],
+      "damage" : 15,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "ice",
+      "knockback" : 13,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [-0.6875, -0.375], [-0.4375, -0.625], [0.4375, -0.625], [0.6875, -0.375], [0.6875, 0.25], [0.4375, 0.5], [-0.4375, 0.5], [-0.6875, 0.25] ],
+
+      "mass" : 0.5,
+      "walkSpeed" : 5,
+      "runSpeed" : 5,
+      "jumpSpeed" : 25
+    },
+
+    "bodyMaterialKind" : "stone",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "stone"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/monster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "knockbackStunTime" : {
+          "baseValue" : 0.25
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 20
+        },
+        "maxHealth" : {
+          "baseValue" : 100
+        },
+        "protection" : {
+          "baseValue" : 2.5
+        },
+        "healthRegen" : {
+          "baseValue" : 0.3        },
+        "powerMultiplier" : {
+          "baseValue" : 0.5        },
+        "physicalResistance" : {
+          "baseValue" : 0.2
+        },
+        "fireResistance" : {
+          "baseValue" : 5.0
+        },
+        "fireStatusImmunity" : {
+          "baseValue" : 5.0
+        },
+        "iceResistance" : {
+          "baseValue" : 5.0
+        },
+        "iceStatusImmunity" : {
+          "baseValue" : 5.0
+        },
+        "electricResistance" : {
+          "baseValue" : 5.0
+        },
+        "electricStatusImmunity" : {
+          "baseValue" : 5.0
+        },
+        "poisonResistance" : {
+          "baseValue" : 5.0
+        },
+        "poisonStatusImmunity" : {
+          "baseValue" : 5.0
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : true,
+    "captureHealthFraction" : 0.5,
+    "nametagColor" : [64, 200, 255],
+    "captureCollectables" : { "monsters" : "gleap" }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name" : "spiretotem",
+  "category" : "spiretotem",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "spiretotem.png"
+  }
+}

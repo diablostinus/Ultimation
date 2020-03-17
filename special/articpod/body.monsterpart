@@ -1,0 +1,9 @@
+{
+  "name" : "articpod",
+  "category" : "articpod",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "articpod.png"
+  }
+}

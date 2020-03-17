@@ -1,0 +1,10 @@
+{
+  "name" : "geodit",
+  "category" : "geodit",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "geodit.png",
+    "bodyfullbright" : "geoditfullbright.png"
+  }
+}

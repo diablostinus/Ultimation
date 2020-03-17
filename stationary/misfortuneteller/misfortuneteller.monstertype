@@ -1,0 +1,183 @@
+{
+  "type" : "misfortuneteller",
+  "shortdescription" : "Misfortune Teller",
+  "description" : "An organism made of rock and geode crystals. It's formed from a hive-mind of bacteria.",
+
+  "categories" : [ "misfortuneteller" ],
+  "parts" : [ "body" ],
+
+  "animation" : "misfortuneteller.animation",
+
+  "dropPools" : [ { "default" : "geodeRewards" } ],
+
+  "baseParameters" : {
+    "scripts" : [
+      "/monsters/monster.lua"
+    ],
+
+    "behavior" : "monster",
+    "deathBehavior" : "monster-death",
+
+    "facingMode" : "transformation",
+
+    "seeThroughLiquid" : false,
+    "behaviorConfig" : {
+      "damageOnTouch" : true,
+
+      "targetQueryRange" : 50,
+      "targetOnDamage" : true,
+      "keepTargetInSight" : true,
+      "keepTargetInRange" : 100,
+      "targetOutOfSightTime" : 10.0,
+
+      "hurtWaitForGround" : false,
+
+      "wanderActions" : [
+        {
+          "name" : "action-stop",
+          "parameters" : {
+            "stopForce" : 20
+          }
+        }
+      ],
+
+      "foundTargetActions" : [],
+	  "hostileActions" : [
+	    {
+          "name" : "action-fire",
+          "cooldown" : 3.0,
+          "parameters" : {
+            "requireLineOfSight" : true,
+            "maximumRange" : 50,
+            "minimumRange" : 5,
+            "windupState" : "windup",
+            "windupTime" : 0.8,
+
+            "projectileType" : "ultimation_geodecrystalballwindup",
+            "aimAtTarget" : true,
+            "fireOffset" : [0, 0],
+            "projectileCount" : 3,
+            "projectileInterval" : 1,
+            "fireState" : "fire",
+            "fireDelay" : 0.2,
+            "fireSound" : "fire",
+			"onGround" : false,
+
+            "winddownState" : "winddown",
+            "winddownTime" : 0.53
+		  }
+        }
+	  ],
+
+      "approachActions" : [
+      ],
+
+      "concurrentActions" : [],
+
+      "concurrentHostileActions" : [],
+
+      "deathActions" : []
+    },
+
+    "touchDamage" : {
+      "poly" : [ [1.8125, -1.25], [1.8125, -3.25], [1, -0.8125], [-1, -4.0625], [-1.8125, -3.35], [-1.8125, -1.25], [-1, -0.4375], [1, -0.4375] ],
+      "damage" : 15,
+
+      "teamType" : "enemy",
+      "damageSourceKind" : "impact",
+      "knockback" : 20,
+      "statusEffects" : [ ]
+    },
+
+    "metaBoundBox" : [-4, -4, 4, 4],
+    "scale" : 1.0,
+
+    "movementSettings" : {
+      "collisionPoly" : [ [1.8125, 2], [1.8125, 0], [1, -0.8125], [-1, -0.8125], [-1.8125, 0], [-1.8125, 2], [-1, 2.8125], [1, 2.8125] ],
+
+      "mass" : 2.0,
+      "walkSpeed" : 4,
+      "runSpeed" : 12,
+      "gravityEnabled" : false,
+
+      "bounceFactor" : 0.5,
+      "groundFriction" : 10,
+
+      "airFriction" : 0,
+      "airForce" : 0,
+      "flySpeed" : 0
+    },
+
+    "bodyMaterialKind" : "stone",
+
+    "knockoutTime" : 0.3,
+    "knockoutAnimationStates" : {
+      "damage" : "stunned"
+    },
+    "deathParticles" : "deathPoof",
+    "knockoutEffect" : "",
+
+    "stunDamageSuppression" : 0.2,
+
+    "statusSettings" : {
+      "statusProperties" : {
+        "targetMaterialKind" : "stone"
+      },
+
+      "appliesEnvironmentStatusEffects" : false,
+      "appliesWeatherStatusEffects" : true,
+      "minimumLiquidStatusEffectPercentage" : 0.1,
+
+      "primaryScriptSources" : [
+        "/stats/spacemonster_primary.lua"
+      ],
+      "primaryScriptDelta" : 5,
+
+      "stats" : {
+        "grit" : {
+          "baseValue" : 1
+        },
+        "knockbackStunTime" : {
+          "baseValue" : 0.3
+        },
+        "knockbackThreshold" : {
+          "baseValue" : 9
+        },
+        "maxHealth" : {
+          "baseValue" : 80
+        },
+        "protection" : {
+          "baseValue" : 0.0
+        },
+        "healthRegen" : {
+          "baseValue" : 0.0
+        },
+        "powerMultiplier" : {
+          "baseValue" : 1.0
+        },
+        "acidicbacteriaImmunity" : { 
+          "baseValue" : 1
+        },
+        "decayingairImmunity" : { 
+          "baseValue" : 1
+        }
+      },
+
+      "resources" : {
+        "stunned" : {
+          "deltaValue" : -1.0,
+          "initialValue" : 0.0
+        },
+        "health" : {
+          "maxStat" : "maxHealth",
+          "deltaStat" : "healthRegen",
+          "defaultPercentage" : 100
+        }
+      }
+    },
+
+    "mouthOffset" : [0, 0],
+    "feetOffset" : [0, -8],
+    "capturable" : false
+  }
+}

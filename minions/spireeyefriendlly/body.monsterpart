@@ -1,0 +1,9 @@
+{
+  "name" : "spireeyefriendlly",
+  "category" : "spireeyefriendlly",
+  "type" : "body",
+
+  "frames" : {
+    "body" : "spireeyefriendlly.png"
+  }
+}
